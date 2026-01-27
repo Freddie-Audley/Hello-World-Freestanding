@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LibraryFree.iml" filepath="$PROJECT_DIR$/.idea/LibraryFree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hello-World-Freestanding.iml" filepath="$PROJECT_DIR$/.idea/Hello-World-Freestanding.iml" />
     </modules>
   </component>
 </project>
