@@ -3,6 +3,6 @@
 long strlen(const char* str)
 {
     const char* i = str;
-    for (; *i; ++i) {}
+    while (*i) i++;
     return i - str;
 }
