@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 1.0)
+cmake_minimum_required(VERSION 3.5)
 project(Hello-World-Freestanding C ASM)
 
 set(CMAKE_C_STANDARD 11)
@@ -17,4 +17,12 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib")
 
 enable_testing()
 
-add_test(NAME RunMain COMMAND Hello-World-Freestanding)
+add_test(NAME RunMain
+        COMMAND Hello-World-Freestanding
+)
+
+set (passRegex "Hello, World!")
+
+set_property(TEST RunMain
+        PROPERTY PASS_REGULAR_EXPRESSION "$(passRegex)"
+)
