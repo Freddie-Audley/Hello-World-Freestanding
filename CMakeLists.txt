@@ -24,5 +24,5 @@ add_test(NAME RunMain
 set (passRegex "Hello, World!")
 
 set_property(TEST RunMain
-        PROPERTY PASS_REGULAR_EXPRESSION "$(passRegex)"
+        PROPERTY PASS_REGULAR_EXPRESSION "${passRegex}"
 )
