@@ -2,7 +2,7 @@
 
 long strlen(const char* str)
 {
-    const char* i = str;
-    while (*i) i++;
-    return i - str;
+    int i = 0;
+    while (str[i]) i++;
+    return i;
 }
