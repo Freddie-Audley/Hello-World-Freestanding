@@ -14,3 +14,7 @@ target_include_directories(Hello-World-Freestanding PUBLIC "{$PROJECT_BINARY_DIR
 add_compile_options(-ffreestanding)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib")
+
+enable_testing()
+
+run_test(NAME RunMain COMMAND Hello-World-Freestanding)
