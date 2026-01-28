@@ -1,4 +1,4 @@
-A freestanding implementation of print, written for Linux.
+A freestanding implementation of print, written for Linux and built with CMake.
 
 ### Languages
 - C
