@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2)
+cmake_minimum_required(VERSION 1.0)
 project(Hello-World-Freestanding C ASM)
 
 set(CMAKE_C_STANDARD 11)
