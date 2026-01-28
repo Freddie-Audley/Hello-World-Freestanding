@@ -17,4 +17,4 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib")
 
 enable_testing()
 
-run_test(NAME RunMain COMMAND Hello-World-Freestanding)
+add_test(NAME RunMain COMMAND Hello-World-Freestanding)
