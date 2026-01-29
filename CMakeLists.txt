@@ -4,11 +4,6 @@ project(Hello-World-Freestanding C ASM)
 # C standard
 set(CMAKE_C_STANDARD 11)
 
-# Default build type
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
-
 # Add library subdirectory
 add_subdirectory(src/slib)
 
@@ -18,8 +13,8 @@ target_include_directories(main PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_BINARY
 target_link_libraries(main PUBLIC slib)
 
 # Freestanding flags
-target_compile_options(main PRIVATE -ffreestanding -nostdlib)
-set_target_properties(main PROPERTIES LINK_FLAGS "-nostdlib")
+target_compile_options(main PRIVATE -ffreestanding -fno-builtin)
+target_link_options(main PRIVATE -nostdlib -static -no-pie -Wl,-e,_start)
 
 # Testing
 enable_testing()
