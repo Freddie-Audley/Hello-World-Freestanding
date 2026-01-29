@@ -13,8 +13,17 @@ target_include_directories(main PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_BINARY
 target_link_libraries(main PUBLIC slib)
 
 # Freestanding flags
-target_compile_options(main PRIVATE -ffreestanding -fno-builtin)
-target_link_options(main PRIVATE -nostdlib -static -no-pie -Wl,-e,_start)
+target_compile_options(main PRIVATE
+        -ffreestanding
+        -fno-builtin
+        -fno-pie
+)
+target_link_options(main PRIVATE
+        -nostdlib
+        -static
+        -no-pie
+        -Wl,--strip-all
+)
 
 # Testing
 enable_testing()
