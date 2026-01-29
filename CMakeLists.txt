@@ -14,7 +14,7 @@ add_subdirectory(src/slib)
 
 # Main executable
 add_executable(main src/main.c)
-target_include_directories(main PUBLIC "{$PROJECT_BINARY_DIR}" "{$PROJECT_BINARY_DIR}/slib")
+target_include_directories(main PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_BINARY_DIR}/slib")
 target_link_libraries(main PUBLIC slib)
 
 # Freestanding flags
