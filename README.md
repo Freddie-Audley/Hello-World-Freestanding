@@ -1,6 +1,6 @@
 # Hello World!
 
-A freestanding implementation of print, written for Linux and built with CMake.
+A free-standing implementation of print.
 
 ### Languages
 - C
